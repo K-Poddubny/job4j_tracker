@@ -24,7 +24,7 @@ public class Cat {
         System.out.println("There are black's food.");
         Cat black = new Cat();
         black.eat("fish");
-        black.giveNick("Котенок Черный");
+        black.giveNick("Кот Черный");
         black.show();
     }
 }
