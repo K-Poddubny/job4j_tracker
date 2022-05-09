@@ -1,12 +1,22 @@
 package ru.job4.oop;
 
 public class Student {
-    public void music() {
+    public void song() {
         System.out.println("I believe I can fly");
     }
 
+    public void music() {
+        System.out.println("Tra tra tra");
+    }
+
     public static void main(String[] args) {
-        Student kostya = new Student();
-        kostya.music();
+        Student petya = new Student();
+        petya.music();
+        petya.music();
+        petya.music();
+        petya.song();
+        petya.song();
+        petya.song();
+
     }
 }
