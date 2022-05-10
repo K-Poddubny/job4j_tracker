@@ -9,6 +9,5 @@ public class BallStory {
         wolf.tryEat(ball);
         hare.tryEat(ball);
         fox.tryEat(ball);
-        System.out.println(ball);
     }
 }
