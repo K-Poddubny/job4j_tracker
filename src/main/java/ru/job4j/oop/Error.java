@@ -19,9 +19,11 @@ public class Error {
         Error error = new Error();
         Error error1 = new Error(true, 404, "У нас проблемки");
         Error error2 = new Error(false, 400, "Всё просто отлично");
+        Error error3 = new Error(true, 100, "Всё сломалось");
         error.printInfoError();
         error1.printInfoError();
         error2.printInfoError();
+        error3.printInfoError();
     }
 
     public void printInfoError() {
