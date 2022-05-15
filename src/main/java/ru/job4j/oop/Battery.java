@@ -4,7 +4,7 @@ public class Battery {
 
     private int load;
 
-    public Battery(int load){
+    public Battery(int load) {
         this.load = load;
     }
 
