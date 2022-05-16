@@ -20,24 +20,19 @@ public class Calculator {
         return b / x;
     }
 
-    public int sumAllOperation(int sum, int minus, int divide, int multiply) {
-        return sum + minus + divide + multiply;
+    public int sumAllOperation(int rsl) {
+        return x + sum(rsl) + multiply(rsl) + minus(rsl) + divide(rsl);
     }
 
     public static void main(String[] args) {
-        int result = Calculator.sum(10);
+        int result = sum(1);
         System.out.println(result);
-        Calculator calculator = new Calculator();
-        int rsl = calculator.multiply(5);
+        int rsl = minus(20);
         System.out.println(rsl);
-        Calculator calculator1 = new Calculator();
-        int rsl2 = calculator1.divide(10);
-        System.out.println(rsl2);
-        int rsl3 = minus(22);
-        System.out.println(rsl3);
-        Calculator calculator3 = new Calculator();
-        int rsl4 = calculator3.sumAllOperation(result, rsl, rsl2, rsl3);
-        System.out.println(rsl4);
-
+        Calculator calculator = new Calculator();
+        System.out.println(calculator.divide(50));
+        System.out.println(calculator.multiply(7));
+        int resSum = 10;
+        System.out.println(calculator.sumAllOperation(resSum));
     }
 }
