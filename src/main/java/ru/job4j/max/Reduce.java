@@ -5,8 +5,8 @@ import java.sql.SQLOutput;
 public class Reduce {
     private int[] array;
 
-    public void to(int[] array) {
-        this.array = array;
+    public void to(int[] number) {
+        this.array = number;
     }
 
     public void print() {
@@ -16,9 +16,9 @@ public class Reduce {
     }
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 3};
+        int[] num = {1, 2, 3};
         Reduce reduce = new Reduce();
-        reduce.to(array);
+        reduce.to(num);
         reduce.print();
     }
 }
