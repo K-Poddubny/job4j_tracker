@@ -6,6 +6,7 @@ public class Pizza {
     public Pizza(String toping) {
         this.toping = toping;
     }
+
     public String name() {
         return "Just tasty pizza" + " " + toping;
     }
