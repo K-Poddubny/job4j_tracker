@@ -10,7 +10,7 @@ public class JSONReportTest {
     public void whenTestGenerateMethod() {
         String ln = System.lineSeparator();
         String expected = "{" + ln
-                + "\t\"name\" : \"Report's name\"," + ln
+                + "1\t\"name\" : \"Report's name\"," + ln
                 + "\t\"body\" : \"Report's body\"" + ln
                 + "}";
         String name = "Report's name";
