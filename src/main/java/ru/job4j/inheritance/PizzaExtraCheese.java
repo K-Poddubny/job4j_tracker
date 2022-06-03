@@ -11,9 +11,4 @@ public class PizzaExtraCheese extends Pizza {
     public String name() {
         return super.name() + cheese;
     }
-
-    public static void main(String[] args) {
-        PizzaExtraCheese pizza = new PizzaExtraCheese("с ");
-        System.out.println(pizza.name());
-    }
 }

@@ -14,6 +14,8 @@ public class PizzaExtraCheeseExtraTomato extends PizzaExtraCheese {
 
     public static void main(String[] args) {
         PizzaExtraCheeseExtraTomato pizza = new PizzaExtraCheeseExtraTomato("с ");
+        PizzaExtraCheese pizzaCheese = new PizzaExtraCheese("с ");
         System.out.println(pizza.name());
+        System.out.println(pizzaCheese.name());
     }
 }
