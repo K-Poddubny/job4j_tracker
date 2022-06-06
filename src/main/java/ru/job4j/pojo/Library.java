@@ -26,7 +26,7 @@ public class Library {
         System.out.println("Выводим на консоль книгу с именем Clean code");
         for (int index = 0; index < allBook.length; index++) {
             Book fairyTales = allBook[index];
-            if (fairyTales.getName().equals("Clean code")) {
+            if ("Clean code".equals(fairyTales.getName())) {
                 System.out.println(fairyTales.getName() + " - " + fairyTales.getPage());
             }
         }
