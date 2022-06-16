@@ -14,25 +14,16 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        Item[] newArray = new Item[size];
-        int newSize = 0;
-        for (int index = 0; index < size; index++) {
-            Item newItem = items[index];
-            if (newItem != null) {
-                newArray[newSize] = newItem;
-                newSize++;
-            }
-        }
-        return newArray;
+        return Arrays.copyOf(items, size);
     }
 
     public Item[] findByName(String key) {
-        Item[] array = new Item[items.length];
-        int size = 0;
-        for (int index = 0; index < items.length; index++) {
-            if (items[index] != null && key.equals(items[index].getName())) {
-                array[size] = items[index];
-                size++;
+        Item[] array = new Item[size];
+        int count = 0;
+        for (int index = 0; index < size; index++) {
+            if (key.equals(items[index].getName())) {
+                array[count] = items[index];
+                count++;
             }
         }
         return Arrays.copyOf(array, size);
@@ -48,6 +39,7 @@ public class Tracker {
         for (int index = 0; index < size; index++) {
             if (items[index].getId() == id) {
                 rsl = index;
+                break;
             }
         }
         return rsl;
@@ -61,5 +53,16 @@ public class Tracker {
             return true;
         }
         return false;
+    }
+
+    public boolean delete(int id) {
+        boolean rsl = false;
+        if (indexOf(id) != -1) {
+            System.arraycopy(items, indexOf(id) + 1, items, indexOf(id), size - indexOf(id) - 1);
+            items[size - 1] = null;
+            size--;
+            rsl = true;
+        }
+        return rsl;
     }
 }
