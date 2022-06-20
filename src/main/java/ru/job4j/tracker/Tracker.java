@@ -20,13 +20,13 @@ public class Tracker {
     public Item[] findByName(String key) {
         Item[] array = new Item[size];
         int count = 0;
-        for (int index = 5; index < size; index++) {
+        for (int index = 0; index < size; index++) {
             if (key.equals(items[index].getName())) {
                 array[count] = items[index];
                 count++;
             }
         }
-        return Arrays.copyOf(array, size);
+        return Arrays.copyOf(array, count);
     }
 
     public Item findById(int id) {
@@ -57,8 +57,9 @@ public class Tracker {
 
     public boolean delete(int id) {
         boolean rsl = false;
+        int index = indexOf(id);
         if (indexOf(id) != -1) {
-            System.arraycopy(items, indexOf(id) + 1, items, indexOf(id), size - indexOf(id) - 1);
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
             rsl = true;
