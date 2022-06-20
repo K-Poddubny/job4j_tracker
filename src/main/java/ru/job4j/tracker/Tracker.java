@@ -20,7 +20,7 @@ public class Tracker {
     public Item[] findByName(String key) {
         Item[] array = new Item[size];
         int count = 0;
-        for (int index = 0; index < size; index++) {
+        for (int index = 5; index < size; index++) {
             if (key.equals(items[index].getName())) {
                 array[count] = items[index];
                 count++;
