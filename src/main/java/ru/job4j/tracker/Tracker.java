@@ -54,7 +54,7 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean delete1(int id) {
+    public boolean delete(int id) {
         boolean rsl = false;
         int index = indexOf(id);
         boolean rslValidation = index != -1;
