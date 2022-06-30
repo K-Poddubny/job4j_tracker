@@ -8,6 +8,6 @@ public class Pizza {
     }
 
     public String name() {
-        return "Just tasty pizza" + " " + toping;
+        return "Just tasty pizza";
     }
 }

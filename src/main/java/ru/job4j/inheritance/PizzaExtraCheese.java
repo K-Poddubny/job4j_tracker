@@ -1,7 +1,7 @@
 package ru.job4j.inheritance;
 
 public class PizzaExtraCheese extends Pizza {
-    private static String cheese = "сыром";
+    private static String cheese = " с сыром";
 
     public PizzaExtraCheese(String toping) {
         super(toping);
