@@ -6,6 +6,7 @@ public class ShowItem implements UserAction {
     public ShowItem(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "Show all item";
