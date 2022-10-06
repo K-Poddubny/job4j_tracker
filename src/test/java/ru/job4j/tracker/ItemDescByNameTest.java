@@ -13,7 +13,6 @@ public class ItemDescByNameTest {
 
     @Test
     public void whenItemDescByNameTestThenSortedDesc() {
-        //given
         Item petr = new Item("Petr");
         Item vasya = new Item("Vasya");
         Item alisa = new Item("Alisa");
@@ -27,9 +26,7 @@ public class ItemDescByNameTest {
                 petr,
                 alisa
         );
-        //when
         Collections.sort(items, new ItemDescByName());
-        //then
         assertEquals(expected, items);
     }
 }

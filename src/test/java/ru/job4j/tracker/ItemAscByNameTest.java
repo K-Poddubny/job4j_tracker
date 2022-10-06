@@ -13,7 +13,6 @@ public class ItemAscByNameTest {
 
     @Test
     public void whenItemAscByNameThenSortedAsc() {
-        //given
         Item petr = new Item("Petr");
         Item vasya = new Item("Vasya");
         Item alisa = new Item("Alisa");
@@ -27,9 +26,7 @@ public class ItemAscByNameTest {
                 petr,
                 vasya
         );
-        //when
         Collections.sort(items, new ItemAscByName());
-        //then
         assertEquals(expected, items);
     }
 }
