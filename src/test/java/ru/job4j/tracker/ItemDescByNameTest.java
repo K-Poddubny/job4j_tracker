@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ItemDescByNameTest {
 
     @Test
-    public void whenItemDescByNameTest_thenSortedDesc() {
+    public void whenItemDescByNameTestThenSortedDesc() {
         //given
         Item petr = new Item("Petr");
         Item vasya = new Item("Vasya");
