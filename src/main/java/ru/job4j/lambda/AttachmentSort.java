@@ -19,12 +19,10 @@ public class AttachmentSort {
                 return Integer.compare(left.getSize(), right.getSize());
             }
         };
-        Comparator comparatorName = new Comparator() {
+        Comparator<Attachment> comparatorName = new Comparator<Attachment>() {
             @Override
-            public int compare(Object o1, Object o2) {
-                Attachment left = (Attachment) o1;
-                Attachment right = (Attachment) o2;
-                return compare(left.getName(), right.getName());
+            public int compare(Attachment o1, Attachment o2) {
+                return o1.getName().compareTo(o2.getName());
             }
         };
         attachments.sort(comparator);
