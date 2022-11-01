@@ -11,17 +11,17 @@ public class FunctionalInterfaces {
         Map<Integer, String> map = new HashMap<>();
         BiConsumer<Integer, String> biCon = (s1, s2) -> map.put(s1, s2);
 
-        map.put(1, "one");
-        map.put(2, "two");
-        map.put(3, "three");
-        map.put(4, "four");
-        map.put(5, "five");
-        map.put(6, "six");
-        map.put(7, "seven");
+        biCon.accept(1, "one");
+        biCon.accept(2, "two");
+        biCon.accept(3, "three");
+        biCon.accept(4, "four");
+        biCon.accept(5, "five");
+        biCon.accept(6, "six");
+        biCon.accept(7, "seven");
 
-        Predicate<Integer> pred = s1 -> s1 % 2 == 0 || map.get(s1).length() == 4;
+        BiPredicate<Integer, String> pred = (s1, s2) -> s1 % 2 == 0 || s2.length() == 4;
         for (Integer i : map.keySet()) {
-            if (pred.test(i)) {
+            if (pred.test(i, map.get(i))) {
                 System.out.println("key: " + i + " value: " + map.get(i));
             }
         }
